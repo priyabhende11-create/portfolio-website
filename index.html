@@ -7,39 +7,48 @@
     <title>Priya Bhende Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- EmailJS SDK -->
+    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">Priya Portfolio</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <div class="mode-toggle"><i class="fas fa-moon"></i></div>
     </nav>
 
     <!-- HOME -->
+    <!-- HOME -->
     <section id="home" class="hero">
+        <!-- Motion background container -->
+        <div class="hero-bg"></div>
+
         <div class="hero-content">
             <div class="hero-img">
-                <img src="my photo.jpeg" alt="My Photo">
+                <img src="my photo.jpeg" alt="Priya Bhende">
             </div>
             <h1>Hi, I'm <span class="highlight">Priya Bhende</span></h1>
             <p>Computer Engineering Student | ML & Python Developer</p>
             <a href="#projects" class="btn">View My Work</a>
         </div>
     </section>
-
     <!-- ABOUT -->
     <section id="about" class="container">
         <h2>About Me</h2>
         <p>
-            I am a passionate Computer Engineering student currently in 3rd year Diploma.
-            I am interested in Machine Learning, Python Development, and building real-world projects.
+            I am a passionate Computer Engineering student in 3rd year Diploma. I love Machine Learning, Python
+            Development, and building real-world projects.
         </p>
-
         <div class="grid-2">
             <div class="card">
                 <h3>Education</h3>
@@ -52,8 +61,8 @@
                 <h3>Achievements</h3>
                 <ul>
                     <li>Participated in National Level Project Competition</li>
-                    <li>Participated in State Level Paper Presentation Competition</li>
-                    <li>Work as a News Latter Head in COSA event Organized by Computer Department </li>
+                    <li>State Level Paper Presentation</li>
+                    <li>News Letter Head in COSA Event</li>
                     <li>Developed College360 Project</li>
                 </ul>
             </div>
@@ -61,7 +70,7 @@
     </section>
 
     <!-- SKILLS -->
-    <section class="skills container">
+    <section id="skills" class="skills container">
         <h2>Technical Skills</h2>
         <div class="skill-tags">
             <span>Python</span>
@@ -73,46 +82,102 @@
             <span>Java</span>
             <span>Git</span>
         </div>
+        <div class="skill-bars">
+            <div class="skill">
+                <h4>Python</h4>
+                <div class="bar">
+                    <div class="progress python" data-width="90%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Machine Learning</h4>
+                <div class="bar">
+                    <div class="progress ml" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>MySQL</h4>
+                <div class="bar">
+                    <div class="progress mysql" data-width="70%"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="container">
         <h2>Projects</h2>
         <div class="grid-3">
-
             <div class="project-card">
                 <h3>College360 System</h3>
-                <p>A complete college management system with student data, results, and admin panel.</p>
+                <p>Complete college management system with student data, results, and admin panel.</p>
             </div>
-
             <div class="project-card">
                 <h3>Disease Prediction System</h3>
-                <p>Machine Learning based system to predict diseases using symptoms.</p>
+                <p>ML-based system to predict diseases using symptoms.</p>
             </div>
-
             <div class="project-card">
-                <h3>Smart Farming Advisor</h3>
-                <p>AI-based system for crop suggestion and farming guidance.</p>
+                <h3>AI-based Career Guidance System</h3>
+                <p>AI-based system to suggest suitable career paths and guide students.</p>
             </div>
+        </div>
+    </section>
 
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"Priya's work on College360 project was outstanding! Very professional and reliable."</p>
+                <h4>- Prof. Ramesh</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"As the News Letter Head, Priya’s work was outstanding. Her dedication and organizational skills
+                    impressed the HOD of the Computer Department."</p>
+                <h4>- Mentor</h4>
+            </div>
         </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="container">
         <h2>Get In Touch</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5"></textarea>
+        <p class="contact-subtitle">Feel free to send me a message. I will get back to you soon!</p>
+        <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Your Name" required>
+            <input type="email" name="user_email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
             <button type="submit" class="btn">Send Message</button>
         </form>
-
-        <p>Email: priyabhende@example.com</p>
-        <p>Location: Maharashtra, India</p>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> priyabhende11@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Yavatmal,Maharashtra, India</p>
+            <p><i class="fas fa-phone"></i> +91 9699887303</p>
+        </div>
     </section>
 
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your Public Key
+        emailjs.init("RhVX0a4IHeK_GY2qV"); // <- Replace with your EmailJS Public Key
+    </script>
+    <!-- FOOTER -->
+    <footer>
+        <p>Connect with me:</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2026 Priya Bhende. All Rights Reserved.</p>
+    </footer>
+
+    <!-- SCRIPT -->
     <script src="script.js"></script>
+    <script>
+        emailjs.init("RhVX0a4IHeK_GY2qV"); // EmailJS public key
+    </script>
 </body>
 
 </html>
