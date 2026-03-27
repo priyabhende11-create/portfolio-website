@@ -4,180 +4,359 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priya Bhende Portfolio</title>
+    <title>Priya Bhende | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- EmailJS SDK -->
-    <!-- <script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">Priya Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">PB<span>.</span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">About</a></li>
+            <li><a href="#skills" class="nav-item">Skills</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#testimonials" class="nav-item">Testimonials</a></li>
+            <li><a href="#contact" class="nav-item">Contact</a></li>
         </ul>
-        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        <div class="mode-toggle"><i class="fas fa-moon"></i></div>
+        <div class="nav-actions">
+            <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-    <!-- HOME -->
-    <!-- HOME -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <!-- Motion background container -->
-        <div class="hero-bg"></div>
+        <div class="hero-orb orb1"></div>
+        <div class="hero-orb orb2"></div>
+        <div class="hero-orb orb3"></div>
+        <div class="hero-particles" id="particles"></div>
 
         <div class="hero-content">
-            <div class="hero-img">
-                <img src="my photo.jpeg" alt="Priya Bhende">
+            <div class="hero-badge">👋 Welcome to my Portfolio</div>
+            <div class="hero-photo-wrap">
+                <div class="hero-photo-ring"></div>
+                <img src="my photo.jpeg" alt="Priya Bhende" class="hero-photo">
             </div>
-            <h1>Hi, I'm <span class="highlight">Priya Bhende</span></h1>
-            <p>Computer Engineering Student | ML & Python Developer</p>
-            <a href="#projects" class="btn">View My Work</a>
+            <h1 class="hero-title">Hi, I'm <span class="name-highlight">Priya<br>Bhende</span></h1>
+            <p class="hero-sub">Computer Engineering Student & ML Developer</p>
+            <div class="hero-chips">
+                <span>🐍 Python</span>
+                <span>🤖 Machine Learning</span>
+                <span>🌐 Web Dev</span>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn-outline">Let's Talk</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
         </div>
     </section>
-    <!-- ABOUT -->
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate Computer Engineering student in 3rd year Diploma. I love Machine Learning, Python
-            Development, and building real-world projects.
-        </p>
-        <div class="grid-2">
-            <div class="card">
-                <h3>Education</h3>
-                <ul>
-                    <li><strong>Diploma in Computer Engineering</strong></li>
-                    <li>Government Polytechnic Yavatmal | 2023 - 2026</li>
-                </ul>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="section-label">01 — About Me</div>
+        <h2 class="section-title">The Person <em>Behind the Code</em></h2>
+
+        <div class="about-grid">
+            <div class="about-visuals">
+                <div class="photo-main">
+                    <img src="my photo.jpeg" alt="Priya Bhende">
+                    <div class="photo-badge"><i class="fas fa-laptop-code"></i> Developer</div>
+                </div>
+                <div class="about-stat-card stat1">
+                    <span class="stat-num">5+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="about-stat-card stat2">
+                    <span class="stat-num">3+</span>
+                    <span class="stat-label">Years Learning</span>
+                </div>
+                <div class="about-blob"></div>
             </div>
-            <div class="card">
-                <h3>Achievements</h3>
-                <ul>
-                    <li>Participated in National Level Project Competition</li>
-                    <li>State Level Paper Presentation</li>
-                    <li>News Letter Head in COSA Event</li>
-                    <li>Developed College360 Project</li>
-                </ul>
+
+            <div class="about-info">
+                <p class="about-bio">
+                    Passionate 3rd-year Diploma student in Computer Engineering specializing in <strong>Machine
+                        Learning</strong>,
+                    <strong>Python Development</strong>, and <strong>C++</strong>. I turn complex problems into elegant,
+                    data-driven solutions.
+                </p>
+
+                <div class="info-cards">
+                    <div class="info-card reveal">
+                        <div class="info-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4>Education</h4>
+                            <p>Diploma in Computer Engineering</p>
+                            <p class="info-meta">Govt. Polytechnic Yavatmal • 2023–2026</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card reveal">
+                        <div class="info-card-icon"><i class="fas fa-trophy"></i></div>
+                        <div>
+                            <h4>Achievements</h4>
+                            <ul class="achieve-list">
+                                <li><i class="fas fa-check-circle"></i> Participated in National Level Project
+                                    Competition</li>
+                                <li><i class="fas fa-check-circle"></i> State Level Paper Presentation</li>
+                                <li><i class="fas fa-check-circle"></i> News Letter Head – COSA Event</li>
+                                <li><i class="fas fa-check-circle"></i> Developed College360 System (C++)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-wide reveal">
+                        <div class="info-card-icon"><i class="fas fa-heart"></i></div>
+                        <div>
+                            <h4>Interests</h4>
+                            <div class="interest-tags">
+                                <span>AI & ML</span><span>Open Source</span><span>UI Design</span>
+                                <span>C++</span><span>Data Science</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn-primary">Hire Me <i class="fas fa-paper-plane"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="skills container">
-        <h2>Technical Skills</h2>
-        <div class="skill-tags">
-            <span>Python</span>
-            <span>Machine Learning</span>
-            <span>MySQL</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>C++</span>
-            <span>Java</span>
-            <span>Git</span>
-        </div>
-        <div class="skill-bars">
-            <div class="skill">
-                <h4>Python</h4>
-                <div class="bar">
-                    <div class="progress python" data-width="90%"></div>
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="section-label">02 — Skills</div>
+        <h2 class="section-title">My Technical <em>Toolkit</em></h2>
+
+        <div class="skills-wrapper">
+            <div class="skills-cloud">
+                <div class="skill-pill reveal" style="--delay:.0s"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-pill reveal" style="--delay:.05s"><i class="fas fa-brain"></i> ML</div>
+                <div class="skill-pill reveal" style="--delay:.1s"><i class="fas fa-database"></i> MySQL</div>
+                <div class="skill-pill reveal" style="--delay:.15s"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="skill-pill reveal" style="--delay:.2s"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="skill-pill reveal" style="--delay:.25s"><i class="fas fa-code"></i> C++</div>
+                <div class="skill-pill reveal" style="--delay:.3s"><i class="fab fa-java"></i> Java</div>
+                <div class="skill-pill reveal" style="--delay:.35s"><i class="fab fa-git-alt"></i> Git</div>
+            </div>
+
+            <div class="skill-bars">
+                <div class="skill-row reveal">
+                    <div class="skill-info"><span><i class="fab fa-python"></i> Python</span><span
+                            class="pct">90%</span></div>
+                    <div class="bar-track">
+                        <div class="bar-fill" data-w="90"></div>
+                    </div>
+                </div>
+                <div class="skill-row reveal">
+                    <div class="skill-info"><span><i class="fas fa-brain"></i> Machine Learning</span><span
+                            class="pct">80%</span></div>
+                    <div class="bar-track">
+                        <div class="bar-fill" data-w="80"></div>
+                    </div>
+                </div>
+                <div class="skill-row reveal">
+                    <div class="skill-info"><span><i class="fas fa-code"></i> C++</span><span class="pct">85%</span>
+                    </div>
+                    <div class="bar-track">
+                        <div class="bar-fill" data-w="85"></div>
+                    </div>
                 </div>
             </div>
-            <div class="skill">
-                <h4>Machine Learning</h4>
-                <div class="bar">
-                    <div class="progress ml" data-width="80%"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="section-label">03 — Projects</div>
+        <h2 class="section-title">Things I've <em>Built</em></h2>
+
+        <div class="projects-grid">
+            <!-- College360 with Video -->
+            <!-- College360 with Video - FIXED -->
+            <!-- REPLACE THIS PROJECT CARD -->
+<div class="project-card featured" style="--accent:#ff6b81">
+  <div class="project-video">
+    <!-- ✅ AUTO-PLAY VIDEO - NO DOWNLOAD -->
+    <video 
+      id="autoPlayVideo"
+      class="project-video-player" 
+      muted 
+      loop 
+      playsinline
+      poster="https://via.placeholder.com/400x220/1a1a2e/ffffff?text=College360"
+      data-src="project.mp4"  <!-- YOUR VIDEO FILE -->
+    >
+      <source src="project.mp4" type="video/mp4">
+      <!-- FALLBACK SAMPLE -->
+      <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="project-badge">🎥 Auto Demo</div>
+  <div class="project-body">
+    <div class="project-tags"><span>C++</span><span>MySQL</span></div>
+    <h3>College360 (C++ Project)</h3>
+    <p>Complete college system - scrolls into view & auto plays!</p>
+    <div class="project-links">
+      <a href="https://github.com/priyabhende11-create/portfolio-website" target="_blank" class="proj-btn">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+        <!-- AI Career Guidance -->
+        <div class="project-card" style="--accent:#6a11cb">
+            <div class="project-img"></div>
+            <div class="project-body">
+                <div class="project-tags"><span>AI</span><span>Python</span><span>NLP</span></div>
+                <h3>AI Based Career Guidance System</h3>
+                <p>AI platform analyzing student profiles to suggest personalized career paths and roadmaps.</p>
+                <div class="project-links">
+                    <a href="https://github.com/priyabhende11-create/portfolio-website" target="_blank"
+                        class="proj-btn">
+                        <i class="fab fa-github"></i> Code
+                    </a>
                 </div>
             </div>
-            <div class="skill">
-                <h4>MySQL</h4>
-                <div class="bar">
-                    <div class="progress mysql" data-width="70%"></div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="section-label">04 — Testimonials</div>
+        <h2 class="section-title">What People <em>Say</em></h2>
+
+        <div class="testimonials-grid">
+            <div class="testi-card reveal">
+                <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+                <p>"Priya's College360 C++ project was outstanding! Professional, reliable, and production-ready code. A
+                    pleasure to work with."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">SM</div>
+                    <div>
+                        <strong>Prof. S.S. Mete</strong>
+                        <span>Faculty, Govt. Polytechnic Yavatmal</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testi-card reveal">
+                <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+                <p>"Priya's dedication as News Letter Head for COSA Event impressed the entire Computer Department HOD.
+                    Exceptional organizational skills!"</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">MN</div>
+                    <div>
+                        <strong>Mentor Neha</strong>
+                        <span>COSA Event Coordinator</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testi-card reveal">
+                <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+                <p>"Priya demonstrates excellent ML concepts in her AI Career Guidance System. Clean code and attention
+                    to detail."</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">PK</div>
+                    <div>
+                        <strong>Prof. K. Patil</strong>
+                        <span>Project Guide</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="grid-3">
-            <div class="project-card">
-                <h3>College360 System</h3>
-                <p>Complete college management system with student data, results, and admin panel.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="section-label">05 — Contact</div>
+        <h2 class="section-title">Let's <em>Connect</em></h2>
+
+        <div class="contact-wrapper">
+            <div class="contact-info-panel">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                    <div><span class="ci-label">Email</span><a
+                            href="mailto:priyabhende11@gmail.com">priyabhende11@gmail.com</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                    <div><span class="ci-label">Phone</span><a href="tel:+919699887303">+91 96998 87303</a></div>
+                </div>
+                <div class="contact-item">
+                    <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><span class="ci-label">Location</span><span>Yavatmal, Maharashtra</span></div>
+                </div>
+                <div class="social-row">
+                    <a href="https://github.com/priyabhende11-create/portfolio-website" target="_blank"
+                        class="social-btn" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/priyabhende11" target="_blank" class="social-btn" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Disease Prediction System</h3>
-                <p>ML-based system to predict diseases using symptoms.</p>
-            </div>
-            <div class="project-card">
-                <h3>AI-based Career Guidance System</h3>
-                <p>AI-based system to suggest suitable career paths and guide students.</p>
-            </div>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="user_name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" name="user_email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" name="subject" placeholder="Project Collaboration">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                <div id="form-status" class="form-status"></div>
+            </form>
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="container">
-        <h2>Testimonials</h2>
-        <div class="testimonial-cards">
-            <div class="testimonial-card">
-                <p>"Priya's work on College360 project was outstanding! Very professional and reliable."</p>
-                <h4>Prof.S.S.Mete</h4>
-            </div>
-            <div class="testimonial-card">
-                <p>"As the News Letter Head, Priya’s work was outstanding. Her dedication and organizational skills
-                    impressed the HOD of the Computer Department."</p>
-                <h4>- Mentor</h4>
-            </div>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">PB<span>.</span></div>
+            <p>&copy; 2026 Priya Bhende. Made with <i class="fas fa-heart" style="color:#ff6b81"></i></p>
         </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="container">
-        <h2>Get In Touch</h2>
-        <p class="contact-subtitle">Feel free to send me a message. I will get back to you soon!</p>
-        <form id="contact-form">
-            <input type="text" name="user_name" placeholder="Your Name" required>
-            <input type="email" name="user_email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> priyabhende11@gmail.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Yavatmal,Maharashtra, India</p>
-            <p><i class="fas fa-phone"></i> +91 9699887303</p>
-        </div>
-    </section>
-
-    <!-- EmailJS SDK -->
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        // Initialize EmailJS with your Public Key
-        emailjs.init("RhVX0a4IHeK_GY2qV"); // <- Replace with your EmailJS Public Key
-    </script>
-    <!-- FOOTER -->
-    <footer>
-        <p>Connect with me:</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-        <p>&copy; 2026 Priya Bhende. All Rights Reserved.</p>
     </footer>
 
-    <!-- SCRIPT -->
+    <!-- Scripts -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>emailjs.init("RhVX0a4IHeK_GY2qV");</script>
     <script src="script.js"></script>
-    <script>
-        emailjs.init("RhVX0a4IHeK_GY2qV"); // EmailJS public key
-    </script>
 </body>
 
 </html>
